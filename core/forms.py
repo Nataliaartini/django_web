@@ -22,14 +22,13 @@ class ContatoForm(forms.Form):
             subject='E-mail enviado pelo sistema django2',
             body=conteudo,
             from_email='contato@seudominio.com.br',
-            to=['contato@seudominio.com.br',],
+            to=['contato@seudominio.com.br', ],
             headers={'Reply-To': email}
         )
         mail.send()
 
 
 class ProdutoModelForm(forms.ModelForm):
-
     class Meta:
         model = Produto
         fields = ['nome', 'preco', 'estoque', 'imagem']
