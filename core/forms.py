@@ -28,7 +28,7 @@ class ContatoForm(forms.Form):
         mail.send()
 
 
-class ProdutoModelForm(forms.ModelForm):
+class ProductModelForm(forms.ModelForm):
     class Meta:
         model = Produto
         fields = ['nome', 'preco', 'estoque', 'imagem']

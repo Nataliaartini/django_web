@@ -31,4 +31,3 @@ def produto_pre_save(signal, instance, sender, **kwargs):
 
 
 signals.pre_save.connect(produto_pre_save, sender=Produto)
-print("testando")
