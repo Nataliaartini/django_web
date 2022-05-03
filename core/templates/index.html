@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        {% if produtos %}
+        {% if produtos %} {# Se existir produtos vai exibi-los#}
         <h1>Produtos</h1>
 
         <table class="table table-dark">
@@ -48,7 +48,7 @@
             </tbody>
         </table>
         {% else %}
-            <h2>Ainda não existem produtos cadastrados. :(</h2>
+            <h2>Ainda não existem produtos cadastrados. :(</h2> {# se não existir produtos cadastrados #}
         {% endif %}
     </div>
 {% bootstrap_javascript jquery='full' %}
