@@ -31,7 +31,7 @@ def contato(request):
 
 
 def produto(request):
-    if str(request.user) != 'AnonymousUser':
+    if str(request.user) != 'AnonymousUser': # Se o usuário estiver logado...
         if str(request.method) == 'POST':
             form = ProductModelForm(request.POST, request.FILES)
             if form.is_valid():
@@ -49,4 +49,4 @@ def produto(request):
         }
         return render(request, 'produto.html', context)
     else:
-        return redirect('index')
+        return redirect('index') # ...se não Redireciona para a página inicial (index)
